@@ -1,105 +1,84 @@
-# Contributing Guidelines
+# Contributing to a Microsoft Cloud Workshop
 
-Welcome, and thanks in advance for your help! Please follow these simple guidelines :+1:
+Welcome, and thank you for your interest in contributing to our Microsoft Cloud Workshop!
 
-# How to contribute to Serverless
+There are many ways that you can contribute, beyond writing or coding. The goal of this document is to provide a high-level overview of how you can get involved.
 
-## When you propose a new feature or bug fix
+## Contributing
 
-**Note:** Please make sure to write an issue first and get enough feedback before jumping into a Pull Request!
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
+the rights to use your contribution. For details, visit https://cla.microsoft.com.
 
-- Please make sure there is an open issue discussing your contribution
-- If there isn't, please open an issue so we can talk about it before you invest time into the implementation
-- When creating an issue follow the guide that GitHub shows so we have enough information about your proposal
+When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
+a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
+provided by the bot. You will only need to do this once across all repos using our CLA.
 
-## When you want to work on an existing issue
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-**Note:** Please write a quick comment in the corresponding issue and ask if the feature is still relevant and that you want to jump into the implementation.
+## Asking Questions
 
-Check out our [help wanted](https://github.com/serverless/serverless/labels/help%20wanted) or [good first issue](https://github.com/serverless/serverless/labels/good%20first%20issue) labels to find issues we want to move forward on with your help.
+Have a question? Open an issue using the question template and the `question` label.  
 
-We will do our best to respond/review/merge your PR according to priority. We hope that you stay engaged with us during this period to insure QA. Please note that the PR will be closed if there hasn't been any activity for a long time (~ 30 days) to keep us focused and keep the repo clean.
+The active community will be eager to assist you. Your well-worded question will serve as a resource to others searching for help.
 
-## Reviewing Pull Requests
+## Providing Feedback
 
-Another really useful way to contribute to Serverless is to review other peoples Pull Requests. Having feedback from multiple people is really helpful and reduces the overall time to make a final decision about the Pull Request.
+Your comments and feedback are welcome, and the project team is available via handful of different channels.
 
-## Writing / improving documentation
+## Reporting Issues
 
-Our documentation lives on GitHub in the [docs](docs) directory. Do you see a typo or other ways to improve it? Feel free to edit it and submit a Pull Request!
+Have you identified a reproducible problem in a workshop? Have a feature request? We want to hear about it! Here's how you can make reporting your issue as effective as possible.
 
-## Providing support
+### Identify Where to Report
 
-The easiest thing you can do to help us move forward and make an impact on our progress is to simply provide support to other people having difficulties with their Serverless projects.
+The MSW project is distributed across multiple repositories. Try to file the issue against the correct workshop. Check the list of [Related Projects](https://github.com/Microsoft/MSW/wiki/Related-Projects) if you aren't sure which repo is correct.
 
-You can do that by replying to [issues on Github](https://github.com/serverless/serverless/issues), chatting with other community members in [our Chat](http://chat.serverless.com) or helping with questions in [our Forum](http://forum.serverless.com).
+### Look For an Existing Issue
 
----
+Before you create a new issue, please do a search in [open issues](https://github.com/Microsoft/MSW/issues) to see if the issue or feature request has already been filed.
 
-# Code Style
+Be sure to scan through the [most popular](https://github.com/Microsoft/MSW/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc) feature requests.
 
-We aim for clean, consistent code style. We're using ESlint to check for codestyle issues using the Airbnb preset.
+If you find your issue already exists, make relevant comments and add your [reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments). Use a reaction in place of a "+1" comment:
 
-## Verifying linting style
+* 👍 - upvote
+* 👎 - downvote
 
-```
-npm run lint
-```
 
-## Fixing lint issues
+If you cannot find an existing issue that describes your bug or feature, create a new issue using the guidelines below.
 
-```
-npm run lint:fix
-```
+### Writing Good Bug Reports and Feature Requests
 
-To help reduce the effort of creating contributions with this style, an [.editorconfig file](http://editorconfig.org/) is provided that your editor may use to override any conflicting global defaults and automate a subset of the style settings.
+File a single issue per problem and feature request. Do not enumerate multiple bugs or feature requests in the same issue.
 
-# Testing
+Do not add your issue as a comment to an existing issue unless it's for the identical input. Many issues look similar, but have different causes.
 
-We aim for a (near) 100% test coverage, so make sure your tests cover as much of your code as possible.
+The more information you can provide, the more likely someone will be successful reproducing the issue and finding a fix.  Please use the template for each issue.
 
-## Test coverage
+### Final Checklist
 
-During development, you can easily check coverage by running `npm run coverage`, then opening the `index.html` file inside the `coverage` directory.
+Please remember to do the following:
 
-Please follow these Testing guidelines when writing your unit tests:
+* [ ] Search the issue repository to ensure your report is a new issue
 
-- Include a top-level `describe('ClassName')` block, with the name of the class you are testing
-- Inside that top-level `describe()` block, create another `describe('#methodOne()')` block for each class method you might create or modify
-- For each method, include an `it('should do something')` test case for each logical edge case in your changes
-- As you write tests, check the code coverage and make sure all lines of code are covered. If not, just add more test cases until everything is covered
-- For reference and inspiration, please check our `tests` directory
+* [ ] Recreate the issue after disabling all extensions
 
-## Testing templates
+* [ ] Simplify your code around the issue to better isolate the problem
 
-If you add a new template or want to test a template after changing it you can run the template integration tests. Make sure you have `docker` and `docker-compose` installed as they are required. The `docker` containers we're using through compose are automatically including your `$HOME/.aws` folder so you can deploy to AWS.
+Don't feel bad if the developers can't reproduce the issue right away. They will simply ask for more information!
 
-To run all integration tests run:
+### Follow Your Issue
 
-```
-./tests/templates/test-all-templates
-```
+Once submitted, your report will go into the [issue tracking](https://github.com/Microsoft/vscode/wiki/Issue-Tracking) work flow. Be sure to understand what will happen next, so you know what to expect, and how to continue to assist throughout the process.
 
-To run only a specific integration test run:
+## Contributing Fixes
 
-```
-tests/templates/integration-test-template TEMPLATE_NAME BUILD_COMMAND
-```
+If you are interested in writing code to fix issues,
+please see [How to Contribute](https://github.com/Microsoft/MSW/wiki/How-to-Contribute) in the wiki.
 
-so for example:
+# Thank You!
 
-```
-tests/templates/integration-test-template aws-java-maven mvn package
-```
-
-If you add a new template make sure to add it to the `test-all-templates` file and configure the `docker-compose.yml` file for your template.
-
-# Our Code of Conduct
-
-Finally, to make sure you have a pleasant experience while being in our welcoming community, please read our [code of conduct](CODE_OF_CONDUCT.md). It outlines our core values and believes and will make working together a happier experience.
-
-Thanks again for being a contributor to the Serverless Community :tada:!
-
-Cheers,
-
-The :zap: [Serverless](http://www.serverless.com) Team
+Your contributions to open source, large or small, make great projects like this possible. Thank you for taking the time to contribute.
